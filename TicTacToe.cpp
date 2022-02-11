@@ -16,12 +16,29 @@ vector<vector<int>> CreateBoard(){
 
 }
 
+void DisplayBoard(vector<vector<int>> board)
+{
+     for (int i = 0; i < 3; i++)
+     {
+        vector<int> r = board[i];
+
+        cout << r[0];
+        cout << "  ";
+
+        cout << r[1];
+        cout << "  ";
+
+	cout << r[2];
+        cout << '\n';
+     }
+}
+
 int main(){
 
     vector<vector<int>> myBoard = CreateBoard();
 
 
-    cout << myBoard[0][0] << endl;
-
+    //cout << myBoard[0][0] << endl;
+    DisplayBoard(myBoard);
 
 }
