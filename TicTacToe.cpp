@@ -2,26 +2,37 @@
 #include <vector>
 using namespace std;
 
-vector<vector<int>> CreateBoard(){
+vector<vector<char>> CreateBoard(){
 
 
-    vector<vector<int>> board
+    vector<vector<char>> board
     {
-        {0, 0, 0},
-        {0, 0, 0},
-        {0, 0, 0}
+        {'N', 'N', 'N'},
+        {'N', 'N', 'N'},
+        {'N', 'N', 'N'}
     };
 
     return board;
 
 }
 
+void DisplayBoard(vector<vector<char>> board){
+    cout << "Printing Board: " << endl;
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout << board[i][j];
+        }
+        cout << endl;
+    }
+
+}
+
 int main(){
 
-    vector<vector<int>> myBoard = CreateBoard();
+    vector<vector<char>> myBoard = CreateBoard();
 
 
-    cout << myBoard[0][0] << endl;
+    DisplayBoard(myBoard);
 
 
 }
