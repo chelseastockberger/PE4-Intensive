@@ -16,7 +16,7 @@ vector<vector<char>> CreateBoard(){
 
 }
 
-void DisplayBoard(vector<vector<char>> board){
+void DisplayBoard(vector<vector<char>> board){ // person 1
     cout << "Printing Board: " << endl;
     for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
@@ -24,8 +24,24 @@ void DisplayBoard(vector<vector<char>> board){
         }
         cout << endl;
     }
-
 }
+
+// void DisplayBoard(vector<vector<int>> board) // person 2
+// {
+//      for (int i = 0; i < 3; i++)
+//      {
+//         vector<int> r = board[i];
+
+//         cout << r[0];
+//         cout << "  ";
+
+//         cout << r[1];
+//         cout << "  ";
+
+// 	cout << r[2];
+//         cout << '\n';
+//      }
+// }
 
 int main(){
 
@@ -33,6 +49,7 @@ int main(){
 
 
     DisplayBoard(myBoard);
+
 
 
 }
