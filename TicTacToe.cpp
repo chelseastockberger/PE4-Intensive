@@ -33,14 +33,16 @@ void DisplayBoard(vector<vector<char>> board) // person 2
 	cout << r[2];
         cout << '\n';
      }
+
+     cout << endl;
 }
 
-void placeMarker(int loc, string mark, vector<vector<string>> &board)
+
+void PlaceMarker(int r, int c, char mark, vector<vector<char>> &board)
 {
-    int r, c;
-    r = ( (loc - 1) / 3 );
-    c = ( (loc - 1) % 3 );
-    board[r][c] = mark;
+ 
+    board[r-1][c-1] = mark;
+
 }
 
 
@@ -54,34 +56,57 @@ void placeMarker(int loc, string mark, vector<vector<string>> &board)
 
 void GetPlayerChoice(int *row, int *col){
 
+    cout << "Enter Position: (1-3) " << endl;
     cout << "Enter row: ";
     cin >> *row;
-    cout << endl;
     cout << "Enter column: ";
     cin >> *col;
+    cout << endl;
+
 }
-
-// void DisplayBoard(vector<vector<char>> board){ // person 1
-//     cout << "Printing Board: " << endl;
-//     for(int i=0;i<3;i++){
-//         for(int j=0;j<3;j++){
-//             cout << board[i][j];
-//         }
-//         cout << endl;
-//     }
-// }
-
 
 int main(){
 
     int row,col;
+    char mark;
 
     vector<vector<char>> myBoard = CreateBoard();
 
+    // GAME TIME!
 
-    DisplayBoard(myBoard);
+    for(int i=1; i<10; i++){
 
-    GetPlayerChoice(&row,&col);
+        cout << " TURN #" << i << endl;
+
+        if(i % 2 == 0){
+            cout << "____ Player 2's Turn (O)____" << endl;
+            mark = 'O';
+        }else{
+            cout << "____ Player 1's Turn (X)____" << endl;
+            mark = 'X';
+        }
+
+        cout << endl;
+
+        GetPlayerChoice(&row,&col);
+
+        if(row <= 0 || row > 3 || col <= 0 || col > 3){
+            cout << "You entered an invalid row/column so you don't get a turn." << endl;
+        }else{
+
+        PlaceMarker(row, col, mark, myBoard );
+
+        DisplayBoard(myBoard);
+
+        }
+
+
+
+    }
+
+    cout << "Game Over!" << endl;
+
+    return 0;
 
 
 
