@@ -1,0 +1,100 @@
+ TURN #1
+____ Player 1's Turn (X)____
+
+Enter Position: (1-3)
+Enter row: 2
+Enter column: 2
+
+N  N  N
+N  X  N
+N  N  N
+
+ TURN #2
+____ Player 2's Turn (O)____
+
+Enter Position: (1-3)
+Enter row: 1
+Enter column: 1
+
+O  N  N
+N  X  N
+N  N  N
+
+ TURN #3
+____ Player 1's Turn (X)____
+
+Enter Position: (1-3)
+Enter row: 2
+Enter column: 1
+
+O  N  N
+X  X  N
+N  N  N
+
+ TURN #4
+____ Player 2's Turn (O)____
+
+Enter Position: (1-3)
+Enter row: 2
+Enter column: 3
+
+O  N  N
+X  X  O
+N  N  N
+
+ TURN #5
+____ Player 1's Turn (X)____
+
+Enter Position: (1-3)
+Enter row: 1
+Enter column: 2
+
+O  X  N
+X  X  O
+N  N  N
+
+ TURN #6
+____ Player 2's Turn (O)____
+
+Enter Position: (1-3)
+Enter row: 3
+Enter column: 2
+
+O  X  N
+X  X  O
+N  O  N
+
+ TURN #7
+____ Player 1's Turn (X)____
+
+Enter Position: (1-3)
+Enter row: 3
+Enter column: 1
+
+O  X  N
+X  X  O
+X  O  N
+
+ TURN #8
+____ Player 2's Turn (O)____
+
+Enter Position: (1-3)
+Enter row: 1
+Enter column: 3
+
+O  X  O
+X  X  O
+X  O  N
+
+ TURN #9
+____ Player 1's Turn (X)____
+
+Enter Position: (1-3)
+Enter row: 3
+Enter column: 3
+
+O  X  O
+X  X  O
+X  O  X
+
+Game Over!
