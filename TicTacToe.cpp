@@ -16,16 +16,6 @@ vector<vector<char>> CreateBoard(){
 
 }
 
-// void DisplayBoard(vector<vector<char>> board){ // person 1
-//     cout << "Printing Board: " << endl;
-//     for(int i=0;i<3;i++){
-//         for(int j=0;j<3;j++){
-//             cout << board[i][j];
-//         }
-//         cout << endl;
-//     }
-// }
-
 void DisplayBoard(vector<vector<char>> board) // person 2
 {
      for (int i = 0; i < 3; i++)
@@ -50,8 +40,18 @@ void GetPlayerChoice(int *row, int *col){
     cout << endl;
     cout << "Enter column: ";
     cin >> *col;
-
 }
+
+// void DisplayBoard(vector<vector<char>> board){ // person 1
+//     cout << "Printing Board: " << endl;
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             cout << board[i][j];
+//         }
+//         cout << endl;
+//     }
+// }
+
 
 int main(){
 
@@ -63,6 +63,7 @@ int main(){
     DisplayBoard(myBoard);
 
     GetPlayerChoice(&row,&col);
+
 
 
 }
