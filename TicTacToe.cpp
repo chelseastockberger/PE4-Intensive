@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
 
 vector<vector<char>> CreateBoard(){
@@ -25,6 +26,7 @@ void DisplayBoard(vector<vector<char>> board) // person 2
         cout << r[0];
         cout << "  ";
 
+
         cout << r[1];
         cout << "  ";
 
@@ -32,6 +34,23 @@ void DisplayBoard(vector<vector<char>> board) // person 2
         cout << '\n';
      }
 }
+
+void placeMarker(int loc, string mark, vector<vector<string>> &board)
+{
+    int r, c;
+    r = ( (loc - 1) / 3 );
+    c = ( (loc - 1) % 3 );
+    board[r][c] = mark;
+}
+
+
+
+// void DisplayBoard(vector<vector<int>> board) // person 2
+// {
+//      for (int i = 0; i < 3; i++)
+//      {
+//         vector<int> r = board[i];
+
 
 void GetPlayerChoice(int *row, int *col){
 
